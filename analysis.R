@@ -4,18 +4,7 @@ library(dplyr)
 library(stringr)
 source("api-key.R")
 
-library(shiny)
-my_ui <- fluidPage(
-  # A widget: a text input box (save input in the `username` key)
-  textInput("youtuber", label = "What is the Youtube Channel?"),
-  
-  # An output element: a text output (for the `message` key)
-  textOutput("message")
-)
-
-my_server <- function(input, output) {
-  output$count <- renderText({
-username <- input$youtuber
+username <- "buzzfeedvideo"
 base_url <- "https://www.googleapis.com/youtube/v3/"
 resource <- "channels?part=snippet&forUsername="
 getid_uri <- paste0(base_url, resource, username,"&key=", google_key)
@@ -34,10 +23,4 @@ youtuber_content <- content(youtuber, "text")
 youtuber_body <- fromJSON(youtuber_content)
 youtuber_df <- flatten(youtuber_body$items$statistics)
 subscriber_count <- as.numeric(youtuber_df$subscriberCount)
-# use the `username` key from input and and return new value
-# for the `message` key in output
-return subscriber_count
-  })
-}
 
-shinyApp(ui = my_ui, server = my_server)
