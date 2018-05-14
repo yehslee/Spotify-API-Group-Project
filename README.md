@@ -11,8 +11,10 @@ subscribers than some countries have people. For example, the biggest youtuber,
 Pewdiepie, has over 60 million subs, which is more than the population of 
 South Korea. The target audience can also be those who aren't fully aware of the
 impact and volume that is Social Media. 
-
-
+Three questions this will answer are: 
+- How much influence do youtubers have (from their size)?
+- Which youtuber has the biggest impact (from their size)?
+- How much political impact do youtubers have due to their following?
 
 
 
