@@ -2,7 +2,7 @@
 By: Chris Vitalis, Yeh-Sun Lee, Alvin Tran, JoJo Saunders
 
 ## Project Description
-The goal of this project is to work with the [Youtube API](https://www.googleapis.com/youtube/v3/channels) and the [World Demographic API](https://restcountries.eu/rest/v2/all) to be able to understand the demographics and population distribution among popular creators on Youtube. The data is collected by Youtube itself, from the users and subscribers of the various accounts. 
+The goal of this project is to work with the [Youtube API](https://www.googleapis.com/youtube/v3/channels) and the [World Demographic API](https://restcountries.eu/rest/v2/all) to be able to understand the demographics and population distribution among popular creators on Youtube. The data is collected by Youtube itself, from the users and subscribers of the various accounts.
 
 **Who is your Target Audience**
 Our target audience is anyone interested in how popular some youtubers are. It
@@ -29,7 +29,7 @@ We'll need to find the data frames of relevant information, pertaining to a Crea
 
 **What Libraries Will Be Used for this Project?**
 
-We'll require the use of the _dplyr_ library for data wrangling, _ggplot2_ and _plotly_ for data visualization. We will also be using _shiny_ to help more with the construction of our final website, and more visualization and interactive uses. Other than those, we are currently looking at other libraries to further help with data visualizations and more aesthetics for our final project.
+We'll require the use of the _dplyr_ library for data wrangling, _ggplot2_ and _plotly_ for data visualization. We will also be using _shiny_ to help more with the construction of our final website, and more visualization and interactive uses. Other than those, we are currently looking at other libraries to further help with data visualizations and more aesthetics for our final project. We're thinking that the best way to visualize this data will be through using a mix of different plots as well as world maps to both encompass the scale and influence that these creators have on country population, or where their spheres of influence lie.
 
 **What Major Challenges Do You Anticipate?**
 
