@@ -20,8 +20,8 @@ We'll need to find the data frames of relevant information, pertaining to a Crea
 
 **What Libraries Will Be Used for this Project?**
 
-We'll require the use of the _dplyr_ library for data wrangling, _ggplot2_ and _plotly_ for data visualization, and are currently looking at other libraries to help with data visualization as well.
+We'll require the use of the _dplyr_ library for data wrangling, _ggplot2_ and _plotly_ for data visualization. We will also be using _shiny_ to help more with the construction of our final website, and more visualization uses. Other than those, we are currently looking at other libraries to further help with data visualizations.
 
 **What Major Challenges Do You Anticipate?**
 
-One of the biggest challenges we'll face will be trying to analyze the information from Youtube's API into a manageable data frame in order to both visualize the data but also connect it to the world demographic's API, while also being able to display all the relevant information required to answer our questions.
+One of the biggest challenges we'll face will be trying to analyze the information from Youtube's API into a manageable data frame in order to both visualize the data but also connect it to the world demographic's API, while also being able to display all the relevant information required to answer our questions. The data presented by Youtube is big scale data, so being able to filter down and create a dataset that will be useful, and easily understood will most likely be the most difficult aspect of the project.
