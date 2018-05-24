@@ -17,8 +17,9 @@ temp_body <- fromJSON(temp_content)
 temp_df <- flatten(temp_body$items$contentDetails)
 
 video_id <- temp_df$videoId
+video_date <- temp_df$videoPublishedAt
 
-video_stat_df = data.frame("view count" = 1, "like"=1,"dislike"=1, "comment count" =1)[0,]
+video_stat_df = data.frame("view count" = 1, "like"=1,"dislike"=1, "comment count" =1, "date" = 1)[0,]
 for (i in 1:50) {
   loop <- GET(paste0("https://www.googleapis.com/youtube/v3/videos?id=", video_id[[i]],"&key=", google_key,"&part=statistics"))
   loop_content <- content(loop, "text")
@@ -33,4 +34,4 @@ for (i in 1:50) {
   video_stat_df[[i,3]] <- dislikes
   video_stat_df[[i,4]] <- comment_count
 }
-# GOT DATAFRAME OF LIKES & DISLIKES NUMBERS
+video_stat_df[5] <- video_date
