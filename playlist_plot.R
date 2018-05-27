@@ -22,7 +22,7 @@ chill <- function(name){
     select(playlist_name, track_name, artist_name, album_name, 
            energy, acousticness) %>% 
     arrange(energy)
-
+  
   return(custom_chill)
 }
 
@@ -34,7 +34,6 @@ simp <- function(name){
     select(playlist_name, track_name, artist_name, album_name, 
            energy, valence) %>% 
     arrange(valence)
-
+  
   return(custom_simp)
 }
-
