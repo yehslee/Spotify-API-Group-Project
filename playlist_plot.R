@@ -37,3 +37,5 @@ simp <- function(name){
 
   return(custom_simp)
 }
+
+simp_name <- simp("mrlaw98")
