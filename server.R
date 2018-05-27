@@ -57,8 +57,8 @@ createTable <- function(df, tableHeight = 50){
     type = "table",
     header = header,
     cells = cells,
-    width = 1200,
-    height = 1600) %>%
+    width = 900,
+    height = 1200) %>%
     
     layout(xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
            yaxis = list(zeroline = F, showgrid = F, showticklabels = F))
