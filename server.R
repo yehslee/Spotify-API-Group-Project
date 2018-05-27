@@ -1,6 +1,7 @@
 library(dplyr)
 library(plotly)
 library(devtools)
+library(shiny)
 
 source("./playlist_plot.R")
 
@@ -74,6 +75,7 @@ shinyServer(function(input, output) {
 })
 
 # Function for the second tab of website
+
 source("alvin-analysis.R")
 
 df <- read.csv("data/artist_df.csv", stringsAsFactors = FALSE)
