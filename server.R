@@ -66,13 +66,6 @@ createTable <- function(df, tableHeight = 50){
 
 p <- createTable(simp_name)
 
-source("playlist_plot.R")
-
-shinyServer(function(input, output) { 
-
-   output$text <- renderPrint({input$username})
- 
-})
 
 # Function for the second tab of website
 
@@ -98,5 +91,23 @@ shinyServer(function(input, output) {
              track_popularity)
     return(popularity_plot(data, input$pop_var))
   })
+  
+  
+  # Make a Table in Playlist 
+output$mood <- renderPlotly ({
+  if(input$playlist_type == "dance") {
+    return(dance(input$username))
+  } else if (input$playlist_type == "chill"){
+    return(chill(input$username))
+  } else{
+    return(simp(input$username))
+  }
 })
+
+output$playlist_table <- renderPlotly({
+  return(createTable(output$mood))
+})
+
+})
+
 

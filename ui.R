@@ -30,15 +30,15 @@ shinyUI(navbarPage(
         radioButtons("playlist_type",
           label = h3("What are you in the mood for?"),
           choices = list(
-            "Dancing" = "mrlaw98",
-            "Chilling" = "mrlaw98",
-            "Simping" = "mrlaw98"
+            "Dancing" = "dance",
+            "Chilling" = "chill",
+            "Simping" = "simp"
           )
         )
       ),
       # Main panel: display plotly map
       mainPanel(
-        fluidRow(column(3, verbatimTextOutput("text")))
+        plotlyOutput("playlist_table")
       )
     )
   ),
