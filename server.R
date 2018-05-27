@@ -3,7 +3,7 @@ library(plotly)
 library(devtools)
 library(shiny)
 
-source("./playlist_plot.R")
+source("playlist_plot.R")
 
 # Creates a font family to use
 fonts <- list(
@@ -65,8 +65,6 @@ createTable <- function(df, tableHeight = 50){
 }
 
 p <- createTable(simp_name)
-
-source("playlist_plot.R")
 
 shinyServer(function(input, output) { 
 
