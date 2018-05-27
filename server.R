@@ -34,19 +34,19 @@ createTable <- function(df, tableHeight = 50){
     
     # Formatting
     line = list(color = "#b3b3b3"),
-    align = c('left', rep('center', ncol(df))),
-    font = list(color = '#1db954', size = 16),
-    fill = list(color = '#121212')
+    align = c("left", rep("center", ncol(df))),
+    font = list(color = "#1db954", size = 16),
+    fill = list(color = "#212121")
   )
   
   cells <- list(
     values = cellValues,
-    
+  
     # Formatting
     line = list(color = '#b3b3b3'),
     align = c('left', rep('right', ncol(df))),
-    font = list(color = c("#ffffff"), size = 12),
-    fill = list(color = c("#121212", rep("#535353", ncol(df)))),
+    font = list(color = c('#1db954', rep("#ffffff", ncol(df))), size = 12),
+    fill = list(color = c("#212121", rep("#303030", ncol(df)))),
     height = tableHeight
   )
   
@@ -64,4 +64,11 @@ createTable <- function(df, tableHeight = 50){
 }
 
 p <- createTable(simp_name)
+
+source("playlist_plot.R")
+shinyServer(function(input, output) { 
+
+   output$text <- renderPrint({input$username})
+ 
+})
 
