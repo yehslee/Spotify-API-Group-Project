@@ -2,51 +2,50 @@ library(dplyr)
 library(plotly)
 library(stringr)
 
-vline <- function(x = 0, color = "black") {
-  list(
-    type = "line",
-    y0 = 0,
-    y1 = 1,
-    yref = "paper",
-    x0 = x,
-    x1 = x,
-    line = list(color = color)
-  )
-}
-
-hline <- function(y = 0, color = "black") {
-  list(
-    type = "line",
-    x0 = 0,
-    x1 = 1,
-    xref = "paper",
-    y0 = y,
-    y1 = y,
-    line = list(color = color)
-  )
-}
-
 custom_plot <- function(data, x_axis, y_axis) {
   f <- list(
     family = "Courier New, monospace",
     size = 18,
-    color = "#7f7f7f"
+    color = "#FFFFFF"
   )
-  x <- list(
+  ax <- list(
     title = str_to_title(x_axis),
-    titlefont = f
+    titlefont = f,
+    zeroline = FALSE,
+    showline = FALSE,
+    showticklabels = FALSE,
+    showgrid = FALSE
   )
-  y <- list(
+  ay <- list(
     title = str_to_title(y_axis),
-    titlefont = f
+    titlefont = f,
+    zeroline = FALSE,
+    showline = FALSE,
+    showticklabels = FALSE,
+    showgrid = FALSE
   )
-  
+  l <- list(
+    font = list(
+      family = "sans-serif",
+      size = 12,
+      color = "#000"),
+     bgcolor = "#E2E2E2"
+    #bordercolor = "#FFFFFF",
+    #borderwidth = 2
+  )
+
   p <- plot_ly(
     data,
     x = ~ data[, x_axis], y = ~ data[, y_axis],
     text = ~ track_name, color = ~ album_name, type = "scatter"
   ) %>%
-    layout(xaxis = x, yaxis = y, shapes = list(vline(0.5), hline(0.5)))
+    layout(
+      xaxis = ax, yaxis = ay,
+      plot_bgcolor = "transparent",
+      paper_bgcolor = "transparent",
+      legend = list(x = -600, y = 0.5)
+    ) %>% add_segments(x = 0.5, xend = 0.5, y = 0, yend = 1) %>%
+    add_segments(x = 0, xend = 1, y = 0.5, yend = 0.5)
   return(p)
 }
 
@@ -54,20 +53,36 @@ popularity_plot <- function(data, choice) {
   f <- list(
     family = "Courier New, monospace",
     size = 18,
-    color = "#7f7f7f"
+    color = "#ffffff"
   )
-  x <- list(
+  f1 <- list(
+    family = "Arial, sans-serif",
+    size = 10,
+    color = "lightgrey"
+  )
+  ax <- list(
     title = str_to_title(choice),
-    titlefont = f
+    titlefont = f,
+    tickfont = f1,
+    zeroline = FALSE,
+    showline = FALSE,
+    #showticklabels = FALSE,
+    showgrid = FALSE
   )
   y <- list(
     title = "Popularity",
-    titlefont = f
+    titlefont = f,
+    zeroline = FALSE,
+    showline = FALSE,
+    #showticklabels = FALSE,
+    tickfont = f1,
+    showgrid = FALSE
   )
   p1 <- plot_ly(data,
     x = ~ data[, choice],
     y = ~ track_popularity,
     text = ~ track_name, color = ~ album_name, type = "scatter"
   ) %>%
-    layout(xaxis = x, yaxis = y)
+    layout(xaxis = ax, yaxis = y, plot_bgcolor = "transparent",
+           paper_bgcolor = "transparent")
 }

@@ -3,7 +3,7 @@ library(plotly)
 library(devtools)
 library(shiny)
 
-source("./playlist_plot.R")
+source("playlist_plot.R")
 
 # Creates a font family to use
 fonts <- list(
