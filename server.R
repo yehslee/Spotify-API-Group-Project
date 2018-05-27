@@ -3,6 +3,8 @@ library(plotly)
 library(devtools)
 library(shiny)
 
+# devtools::install_github("ropensci/plotly)
+
 source("playlist_plot.R")
 
 # Creates a font family to use
