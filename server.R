@@ -94,18 +94,24 @@ shinyServer(function(input, output) {
   
   
   # Make a Table in Playlist 
-output$mood <- renderPlotly ({
-  if(input$playlist_type == "dance") {
-    return(dance(input$username))
-  } else if (input$playlist_type == "chill"){
-    return(chill(input$username))
-  } else{
-    return(simp(input$username))
-  }
-})
-
+  # mood <- if(input$playlist_type == "dance") {
+  #   return(dance(input$username))
+  # } else if (input$playlist_type == "chill"){
+  #   return(chill(input$username))
+  # } else{
+  #   return(simp(input$username))
+  # }
+  
 output$playlist_table <- renderPlotly({
-  return(createTable(output$mood))
+  if(input$playlist_type == "dance") {
+    mood <- dance(input$username)
+  } else if (input$playlist_type == "chill"){
+    mood <- chill(input$username)
+  } else{
+    mood <- simp(input$username)
+  }
+  
+  return(createTable(mood))
 })
 
 })
