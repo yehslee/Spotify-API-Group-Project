@@ -42,10 +42,9 @@ custom_plot <- function(data, x_axis, y_axis) {
     layout(
       xaxis = ax, yaxis = ay,
       plot_bgcolor = "transparent",
-      paper_bgcolor = "transparent",
-      legend = list(x = -600, y = 0.5)
-    ) %>% add_segments(x = 0.5, xend = 0.5, y = 0, yend = 1) %>%
-    add_segments(x = 0, xend = 1, y = 0.5, yend = 0.5)
+      paper_bgcolor = "transparent"
+    ) %>% add_segments(x = 0.5, xend = 0.5, y = 0, yend = 1, showlegend = FALSE) %>%
+    add_segments(x = 0, xend = 1, y = 0.5, yend = 0.5, showlegend = FALSE)
   return(p)
 }
 

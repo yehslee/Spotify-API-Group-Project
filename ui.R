@@ -72,6 +72,36 @@ shinyUI(navbarPage(
             "happiness" = "valence"
           )
         )
+      ),
+      #   ,
+      #   radioButtons("pop_var",
+      #     label = h3("Choose the variable"),
+      #     choices = list(
+      #       "danceability", "energy", "liveness",
+      #       "happiness" = "valence"
+      #     )
+      #   )
+      # ),
+      mainPanel(
+        plotlyOutput("plot")
+        # plotlyOutput("pop_plot")
+      )
+    )
+  ),
+  tabPanel(
+    "Popularity",
+    titlePanel("Show relationships with track popularity"),
+    # Create sidebar layout
+    sidebarLayout(
+
+      # Side panel for controls
+      sidebarPanel(
+
+        # Input to select variable to map
+        selectInput("artist",
+          label = "Which artist?",
+          choices = unique(df$artist)
+        )
         ,
         radioButtons("pop_var",
           label = h3("Choose the variable"),
@@ -82,7 +112,6 @@ shinyUI(navbarPage(
         )
       ),
       mainPanel(
-        plotlyOutput("plot"),
         plotlyOutput("pop_plot")
       )
     )
