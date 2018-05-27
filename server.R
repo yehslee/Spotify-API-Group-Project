@@ -91,29 +91,17 @@ shinyServer(function(input, output) {
              track_popularity)
     return(popularity_plot(data, input$pop_var))
   })
-  
-  
-  # Make a Table in Playlist 
-  # mood <- if(input$playlist_type == "dance") {
-  #   return(dance(input$username))
-  # } else if (input$playlist_type == "chill"){
-  #   return(chill(input$username))
-  # } else{
-  #   return(simp(input$username))
-  # }
-  
-output$playlist_table <- renderPlotly({
-  if(input$playlist_type == "dance") {
-    mood <- dance(input$username)
-  } else if (input$playlist_type == "chill"){
-    mood <- chill(input$username)
-  } else{
-    mood <- simp(input$username)
-  }
-  
-  return(createTable(mood))
-})
 
+  output$playlist_table <- renderPlotly({
+    if(input$playlist_type == "dance") {
+      mood <- dance(input$username)
+    } else if (input$playlist_type == "chill"){
+      mood <- chill(input$username)
+    } else{
+      mood <- simp(input$username)
+    }
+    
+    return(createTable(mood))
+  })
 })
-
 
