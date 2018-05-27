@@ -2,7 +2,8 @@ library(dplyr)
 library(plotly)
 library(devtools)
 library(shiny)
-#devtools::install_github("ropensci/plotly")
+
+# devtools::install_github("ropensci/plotly")
 
 source("playlist_plot.R")
 
@@ -43,7 +44,7 @@ createTable <- function(df, tableHeight = 50){
   
   cells <- list(
     values = cellValues,
-  
+    
     # Formatting
     line = list(color = '#b3b3b3'),
     align = c('left', rep('right', ncol(df))),
@@ -75,7 +76,7 @@ source("alvin-analysis.R")
 df <- read.csv("data/artist_df.csv", stringsAsFactors = FALSE)
 
 shinyServer(function(input, output) { 
-   
+  
   output$text <- renderPrint({input$username})
   
   output$plot <- renderPlotly({
@@ -92,7 +93,7 @@ shinyServer(function(input, output) {
              track_popularity)
     return(popularity_plot(data, input$pop_var))
   })
-
+  
   output$playlist_table <- renderPlotly({
     if(input$playlist_type == "dance") {
       mood <- dance(input$username)
@@ -105,4 +106,3 @@ shinyServer(function(input, output) {
     return(createTable(mood))
   })
 })
-
