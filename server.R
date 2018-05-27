@@ -2,6 +2,7 @@ library(dplyr)
 library(plotly)
 library(devtools)
 library(shiny)
+#devtools::install_github("ropensci/plotly")
 
 source("playlist_plot.R")
 
@@ -55,8 +56,8 @@ createTable <- function(df, tableHeight = 50){
     type = "table",
     header = header,
     cells = cells,
-    width = 1200,
-    height = 1600) %>%
+    width = 900,
+    height = 1200) %>%
     
     layout(xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
            yaxis = list(zeroline = F, showgrid = F, showticklabels = F))
@@ -66,11 +67,6 @@ createTable <- function(df, tableHeight = 50){
 
 p <- createTable(simp_name)
 
-shinyServer(function(input, output) { 
-
-   output$text <- renderPrint({input$username})
- 
-})
 
 # Function for the second tab of website
 
@@ -95,6 +91,18 @@ shinyServer(function(input, output) {
       select(album_name, track_name, danceability, energy, liveness, valence,
              track_popularity)
     return(popularity_plot(data, input$pop_var))
+  })
+
+  output$playlist_table <- renderPlotly({
+    if(input$playlist_type == "dance") {
+      mood <- dance(input$username)
+    } else if (input$playlist_type == "chill"){
+      mood <- chill(input$username)
+    } else{
+      mood <- simp(input$username)
+    }
+    
+    return(createTable(mood))
   })
 })
 
