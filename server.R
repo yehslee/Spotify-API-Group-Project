@@ -11,7 +11,7 @@ source("playlist_plot.R")
 fonts <- list(
   sans = "Helvetica",
   mono = "Consolas",
-  `Times New Roman` = "DejaVu Serif"
+  `Times New Roman` = "DejaVu Serif" 
 )
 
 # Creates a visual table using Spotify branding colors
