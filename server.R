@@ -52,6 +52,10 @@ createTable <- function(df, tableHeight = 50){
     fill = list(color = c("#212121", rep("#303030", ncol(df)))),
     height = tableHeight
   )
+  m <- list(
+
+    pad = 0
+  )
   
   p <- plot_ly(
     type = "table",
@@ -63,7 +67,8 @@ createTable <- function(df, tableHeight = 50){
     layout(xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
            yaxis = list(zeroline = F, showgrid = F, showticklabels = F), 
            plot_bgcolor='transparent',
-           paper_bgcolor='transparent')
+           paper_bgcolor='transparent', 
+           margin = m)
   
   return(p)
 }
