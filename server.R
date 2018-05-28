@@ -61,7 +61,9 @@ createTable <- function(df, tableHeight = 50){
     height = 1200) %>%
     
     layout(xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
-           yaxis = list(zeroline = F, showgrid = F, showticklabels = F))
+           yaxis = list(zeroline = F, showgrid = F, showticklabels = F), 
+           plot_bgcolor='transparent',
+           paper_bgcolor='transparent')
   
   return(p)
 }
