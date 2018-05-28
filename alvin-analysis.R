@@ -37,14 +37,15 @@ custom_plot <- function(data, x_axis, y_axis) {
   p <- plot_ly(
     data,
     x = ~ data[, x_axis], y = ~ data[, y_axis],
-    text = ~ track_name, color = ~ album_name, type = "scatter"
+    text = ~ track_name, color = ~ album_name, type = "scatter", colors = "Greens"
   ) %>%
     layout(
       xaxis = ax, yaxis = ay,
       plot_bgcolor = "transparent",
-      paper_bgcolor = "transparent"
-    ) %>% add_segments(x = 0.5, xend = 0.5, y = 0, yend = 1, showlegend = FALSE) %>%
-    add_segments(x = 0, xend = 1, y = 0.5, yend = 0.5, showlegend = FALSE)
+      paper_bgcolor = "transparent",
+      legend = list(orientation = "h")
+    ) %>% add_segments(x = 0.5, xend = 0.5, y = 0, yend = 1, showlegend = FALSE, color = "#1db954") %>%
+    add_segments(x = 0, xend = 1, y = 0.5, yend = 0.5, showlegend = FALSE, color = "#1db954")
   return(p)
 }
 
@@ -80,7 +81,7 @@ popularity_plot <- function(data, choice) {
   p1 <- plot_ly(data,
     x = ~ data[, choice],
     y = ~ track_popularity,
-    text = ~ track_name, color = ~ album_name, type = "scatter"
+    text = ~ track_name, color = ~ album_name, colors = "Greens", type = "scatter"
   ) %>%
     layout(xaxis = ax, yaxis = y, plot_bgcolor = "transparent",
            paper_bgcolor = "transparent")
