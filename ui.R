@@ -98,7 +98,7 @@ shinyUI(navbarPage(
       sidebarPanel(
 
         # Input to select variable to map
-        selectInput("artist",
+        selectInput("artist2",
           label = "Which artist?",
           choices = unique(df$artist)
         )
