@@ -33,7 +33,7 @@ createTable <- function(df, tableHeight = 50){
   
   # Create the list to pass to plot_ly()
   header <- list(
-    values = headerValues,
+    values = list("Ranking","Playlist", "Song", "Artist", "Album", "Dance Level" ,"Energy Level"),
     
     # Formatting
     line = list(color = "#b3b3b3"),
@@ -41,6 +41,7 @@ createTable <- function(df, tableHeight = 50){
     font = list(color = "#1db954", size = 16),
     fill = list(color = "#212121")
   )
+  
   
   cells <- list(
     values = cellValues,
@@ -63,6 +64,7 @@ createTable <- function(df, tableHeight = 50){
     cells = cells,
     width = 900,
     height = 1200) %>%
+    
     
     layout(xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
            yaxis = list(zeroline = F, showgrid = F, showticklabels = F), 
