@@ -95,7 +95,7 @@ shinyServer(function(input, output) {
   
   output$pop_plot <- renderPlotly({
     data <- df %>% 
-      filter(artist == input$artist) %>%
+      filter(artist == input$artist2) %>%
       select(album_name, track_name, danceability, energy, liveness, valence,
              track_popularity)
     return(popularity_plot(data, input$pop_var))
