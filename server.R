@@ -7,7 +7,7 @@ source("playlist_plot.R")
 
 # Creates a visual table using Spotify branding colors
 # and the columns can be manually moved
-create_table <- function(df, table_height = 20) {
+create_table <- function(df, table_height = 50) {
   nms <- lapply(names(df), function(x) {
     return(paste0("<b>", x, "</b>"))
   })
@@ -47,7 +47,7 @@ create_table <- function(df, table_height = 20) {
     align = c("left", rep("right", ncol(df))),
     font = list(color = c("#1db954", rep("#ffffff", ncol(df))), size = 12),
     fill = list(color = c("#212121", rep("#303030", ncol(df)))),
-    height = 20
+    height = table_height
   )
   m <- list(
     pad = 0
@@ -57,8 +57,8 @@ create_table <- function(df, table_height = 20) {
     type = "table",
     header = header,
     cells = cells,
-    width = 900,
-    height = 1200
+    width = 1200,
+    height = 1600
   ) %>%
     layout(
       xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
