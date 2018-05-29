@@ -75,9 +75,6 @@ createTable <- function(df, tableHeight = 50){
   return(p)
 }
 
-p <- createTable(simp_name)
-
-
 # Function for the second tab of website
 
 source("alvin-analysis.R")
