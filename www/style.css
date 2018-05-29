@@ -1,0 +1,45 @@
+font-face {
+    font-family: Nunito;
+    src: url(Nunito-Regular.ttf);
+}
+
+.navbar {
+background-color:#282828;
+color:#1e90ff;
+}
+.irs-bar {
+   background-color:#1e90ff;
+}
+body {
+   font-family: "Nunito";
+   color:white;
+   background-color:#383838;
+}
+bodydark {
+   color:#383838;
+}
+h1 {
+  color:#1db954;
+  font-family:"helvetica";
+  font-weight:bold;
+  font-size:35px;
+}
+h2 {
+  color:#ff6b81;
+  font-family:"Nunito";
+  font-style:italic;
+  font-size:20px;
+}
+h3 {
+  color:#1e90ff;
+  font-family:"Nunito";
+  font-weight:bold;
+  font-size:35px;
+}
+h4 {
+  color:#70a1ff;
+  font-family:"Nunito";
+  font-style:italic;
+  font-size:20px;
+}
+

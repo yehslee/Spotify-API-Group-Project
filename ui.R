@@ -8,13 +8,15 @@ library(shinythemes)
 source("server.R")
 source("playlist_plot.R")
 source("alvin-analysis.R")
+
+
 shinyUI(navbarPage(
-  theme = shinytheme("slate"),
+  #theme = shinytheme("slate"),
   "MÜD",
   # Create a tab panel for your map
   tabPanel(
     "Playlist",
-    titlePanel("Custom Spotify MÜD Playlist"),
+    titlePanel(h1("Custom Spotify MÜD Playlist")),
     # Create sidebar layout
     sidebarLayout(
       
@@ -23,12 +25,12 @@ shinyUI(navbarPage(
         
         # Input to select variable to map
         textInput("username",
-                  label = h3("What is your Spotify Username?"),
+                  label = h3("What is Your Spotify Username?"),
                   value = "Username..."
         )
         ,
         radioButtons("playlist_type",
-                     label = h3("What are you in the mood for?"),
+                     label = h2("What Are You in the Mood For?"),
                      choices = list(
                        "Dancing" = "dance",
                        "Chilling" = "chill",
@@ -38,13 +40,15 @@ shinyUI(navbarPage(
       ),
       # Main panel: display plotly map
       mainPanel(
+         tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
         plotlyOutput("playlist_table")
+         
       )
     )
   ),
   tabPanel(
     "Artist",
-    titlePanel("Show trends in artists"),
+    titlePanel(h1("Show Trends in Artists")),
     # Create sidebar layout
     sidebarLayout(
       
@@ -53,12 +57,12 @@ shinyUI(navbarPage(
         
         # Input to select variable to map
         selectInput("artist",
-                    label = "Which artist?",
+                    label = "Which Artist?",
                     choices = unique(df$artist)
         )
         ,
         radioButtons("x_var",
-                     label = h3("Choose the x-variable"),
+                     label = h3("Choose the X-Variable"),
                      choices = list(
                        "danceability", "energy",
                        "happiness" = "valence"
@@ -66,7 +70,7 @@ shinyUI(navbarPage(
         )
         ,
         radioButtons("y_var",
-                     label = h3("Choose the y-variable"),
+                     label = h2("Choose the Y-Variable"),
                      choices = list(
                        "danceability", "energy",
                        "happiness" = "valence"
@@ -90,7 +94,7 @@ shinyUI(navbarPage(
   ),
   tabPanel(
     "Popularity",
-    titlePanel("Show relationships with track popularity"),
+    titlePanel(h1("Show Relationships with Track Popularity")),
     # Create sidebar layout
     sidebarLayout(
 
@@ -99,12 +103,12 @@ shinyUI(navbarPage(
 
         # Input to select variable to map
         selectInput("artist2",
-          label = "Which artist?",
+          label = "Which Artist?",
           choices = unique(df$artist)
         )
         ,
         radioButtons("pop_var",
-                     label = h3("Choose the variable"),
+                     label = h2("Choose the variable"),
                      choices = list(
                        "danceability", "energy", "liveness",
                        "happiness" = "valence"
