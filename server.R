@@ -34,8 +34,7 @@ createTable <- function(df, tableHeight = 50){
     font = list(color = "#1db954", size = 16),
     fill = list(color = "#212121")
   )
-  
-  
+
   cells <- list(
     values = cellValues,
     
@@ -44,10 +43,9 @@ createTable <- function(df, tableHeight = 50){
     align = c('left', rep('right', ncol(df))),
     font = list(color = c('#1db954', rep("#ffffff", ncol(df))), size = 12),
     fill = list(color = c("#212121", rep("#303030", ncol(df)))),
-    height = tableHeight
+    height = 20
   )
   m <- list(
-
     pad = 0
   )
   
@@ -57,8 +55,7 @@ createTable <- function(df, tableHeight = 50){
     cells = cells,
     width = 900,
     height = 1200) %>%
-    
-    
+ 
     layout(xaxis = list(zeroline = F, showgrid = F, showticklabels = F),
            yaxis = list(zeroline = F, showgrid = F, showticklabels = F), 
            plot_bgcolor='transparent',
@@ -69,7 +66,6 @@ createTable <- function(df, tableHeight = 50){
 }
 
 # Function for the second tab of website
-
 source("alvin-analysis.R")
 
 df <- read.csv("data/artist_df.csv", stringsAsFactors = FALSE)
