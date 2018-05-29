@@ -7,13 +7,6 @@ library(shiny)
 
 source("playlist_plot.R")
 
-# Creates a font family to use
-fonts <- list(
-  sans = "Helvetica",
-  mono = "Consolas",
-  `Times New Roman` = "DejaVu Serif" 
-)
-
 # Creates a visual table using Spotify branding colors
 # and the columns can be manually moved
 createTable <- function(df, tableHeight = 50){
@@ -21,7 +14,7 @@ createTable <- function(df, tableHeight = 50){
     return(paste0("<b>", x, "</b>"))
   })
   
-  nms <- append(nms, "<b>Top #</b>", after = 0)
+  nms <- append(nms, "<b>Ranking</b>", after = 0)
   headerValues <- lapply(nms, function(x){return(list(x))})
   
   # Cell Values
@@ -33,7 +26,7 @@ createTable <- function(df, tableHeight = 50){
   
   # Create the list to pass to plot_ly()
   header <- list(
-    values = list("Ranking","Playlist", "Song", "Artist", "Album", "Dance Level" ,"Energy Level"),
+    values = headerValues,
     
     # Formatting
     line = list(color = "#b3b3b3"),
@@ -101,6 +94,7 @@ shinyServer(function(input, output) {
   })
   
   output$playlist_table <- renderPlotly({
+
     if(input$playlist_type == "dance") {
       mood <- dance(input$username)
     } else if (input$playlist_type == "chill"){

@@ -8,8 +8,9 @@ dance <- function(name){
     filter(danceability > .7) %>% 
     filter(energy > .5) %>% 
     select(playlist_name, track_name, artist_name, album_name, danceability, 
-           energy) %>% 
+           energy) %>%
     arrange(-danceability)
+  colnames(custom_dance) <- c("Playlist", "Song", "Artist", "Album", "Dance Level" ,"Energy Level")
   
   return(custom_dance)
 }
@@ -22,6 +23,7 @@ chill <- function(name){
     select(playlist_name, track_name, artist_name, album_name, 
            energy, acousticness) %>% 
     arrange(energy)
+  colnames(custom_chill) <- c("Playlist", "Song", "Artist", "Album", "Energy Level" ,"Acousticness")
   
   return(custom_chill)
 }
@@ -34,6 +36,7 @@ simp <- function(name){
     select(playlist_name, track_name, artist_name, album_name, 
            energy, valence) %>% 
     arrange(valence)
+  colnames(custom_simp) <- c("Playlist", "Song", "Artist", "Album", "Energy Level" ,"Valence")
   
   return(custom_simp)
 }
