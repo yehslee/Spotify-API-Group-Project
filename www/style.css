@@ -1,18 +1,18 @@
-font-face {
-    font-family: Nunito;
-    src: url(Nunito-Regular.ttf);
-}
 
 .navbar {
 background-color:#282828;
 color:#1e90ff;
 }
+.well {
+   background-color:#282828;
+   outline-color: #282828;
+}
 .irs-bar {
    background-color:#1e90ff;
 }
 body {
-   font-family: "Nunito";
-   color:white;
+   font-family: 'Nunito', sans-serif;
+   color:#1e90ff;
    background-color:#383838;
 }
 bodydark {

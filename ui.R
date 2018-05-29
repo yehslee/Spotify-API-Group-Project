@@ -19,10 +19,8 @@ shinyUI(navbarPage(
     titlePanel(h1("Custom Spotify MÜD Playlist")),
     # Create sidebar layout
     sidebarLayout(
-      
       # Side panel for controls
       sidebarPanel(
-        
         # Input to select variable to map
         textInput("username",
                   label = h3("What is Your Spotify Username?"),
@@ -41,7 +39,6 @@ shinyUI(navbarPage(
       mainPanel(
          tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
         plotlyOutput("playlist_table")
-         
       )
     )
   ),
@@ -50,10 +47,8 @@ shinyUI(navbarPage(
     titlePanel(h1("Show Trends in Artists")),
     # Create sidebar layout
     sidebarLayout(
-      
       # Side panel for controls
       sidebarPanel(
-        
         # Input to select variable to map
         selectInput("artist",
                     label = "Which Artist?",
@@ -76,7 +71,6 @@ shinyUI(navbarPage(
       ),
       mainPanel(
         plotlyOutput("plot")
-        # plotlyOutput("pop_plot")
       )
     )
   ),
@@ -85,10 +79,8 @@ shinyUI(navbarPage(
     titlePanel(h1("Show Relationships with Track Popularity")),
     # Create sidebar layout
     sidebarLayout(
-
       # Side panel for controls
       sidebarPanel(
-
         # Input to select variable to map
         selectInput("artist2",
           label = "Which Artist?",
