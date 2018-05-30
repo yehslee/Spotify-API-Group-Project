@@ -67,20 +67,6 @@ shinyUI(navbarPage(
         selectInput("artist",
                     label = "Which Artist?",
                     choices = unique(df$artist)
-        ),
-        radioButtons("x_var",
-                     label = h3("Choose the X-Variable"),
-                     choices = list(
-                       "Danceability" = "danceability", "Energy" = "energy",
-                       "Happiness" = "valence"
-                     )
-        ),
-        radioButtons("y_var",
-                     label = h2("Choose the Y-Variable"),
-                     choices = list(
-                        "Danceability" = "danceability", "Energy" = "energy",
-                        "Happiness" = "valence"
-                     )
         )
       ),
       mainPanel(
