@@ -11,7 +11,7 @@ custom_plot <- function(data, x_axis, y_axis) {
   ax <- list(
     side = "top",
     title = "Energy",
-    side="top",
+    side = "top",
     titlefont = f,
     zeroline = FALSE,
     showline = FALSE,
@@ -33,8 +33,6 @@ custom_plot <- function(data, x_axis, y_axis) {
       color = "#000"
     ),
     bgcolor = "#E2E2E2"
-    # bordercolor = "#FFFFFF",
-    # borderwidth = 2
   )
   annot <- data.frame(
     x = c(0, 0, 1, 1), y = c(0, 1, 0, 1),
