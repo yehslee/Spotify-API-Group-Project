@@ -46,11 +46,11 @@ custom_plot <- function(data, x_axis, y_axis) {
   ) %>%
     layout(
       xaxis = ax, yaxis = ay,
-      height = 500,
-      width = 500,
+      height = 700,
+      width = 700,
       plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
-      legend = list(x = 0.5, y = 400, orientation = "h")
+      legend = list(x = 0.5, y = 800, orientation = "h")
     ) %>%
     add_segments(
       x = 0.5, xend = 0.5, y = 0, yend = 1, showlegend = FALSE,
