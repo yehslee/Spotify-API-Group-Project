@@ -36,4 +36,8 @@ artist_df <- rbind(artist_df, get_artist_audio_features("Taylor Swift") %>%
 artist_df <- rbind(artist_df, get_artist_audio_features("Beyonce") %>%
   mutate(artist = "Beyonce"))
 
+artist_df <- artist_df %>%
+  filter(!(album_name ==
+    "Speak Now World Tour Live (スピーク ・ ナウ・ワールド ・ ツアー・ライヴ)"))
+
 write.csv(artist_df, file = "data/artist_df.csv", row.names = FALSE)

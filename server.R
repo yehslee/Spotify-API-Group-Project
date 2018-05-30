@@ -84,7 +84,7 @@ shinyServer(function(input, output) {
   output$plot <- renderPlotly({
     data <- df %>%
       filter(artist == input$artist) %>%
-      select(album_name, track_name, danceability, energy, liveness, valence)
+      select(album_name, track_name, danceability, energy, liveness, valence) 
     return(custom_plot(data))
   })
 

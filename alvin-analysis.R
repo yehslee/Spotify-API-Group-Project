@@ -50,7 +50,7 @@ custom_plot <- function(data, x_axis, y_axis) {
       width = 700,
       plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
-      legend = list(x = 0.5, y = 800, orientation = "h")
+      legend = list(x = 0.5, y = -800, orientation = "h")
     ) %>%
     add_segments(
       x = 0.5, xend = 0.5, y = 0, yend = 1, showlegend = FALSE,
@@ -107,8 +107,10 @@ popularity_plot <- function(data, choice) {
     layout(
       xaxis = ax, yaxis = y, plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
+      height = 400,
+      width = 800,
       legend = list(
-        x = 0.5, y = 400, orientation = "h"
+        x = 0.5, y = -800, orientation = "h"
       )
     )
 }
