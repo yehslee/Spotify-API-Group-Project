@@ -36,7 +36,7 @@ custom_plot <- function(data, x_axis, y_axis) {
   )
   annot <- data.frame(
     x = c(0, 0, 1, 1), y = c(0, 1, 0, 1),
-    text = c("Sad", "Chill/Relaxing", "Turbulent/Angry", "Upbeat")
+    text = c("Sad", "Relaxing", "Angry", "Upbeat")
   )
   p <- plot_ly(
     data,
@@ -50,7 +50,7 @@ custom_plot <- function(data, x_axis, y_axis) {
       width = 500,
       plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
-      legend = list(orientation = "h")
+      legend = list(x = 0.5, y = 400, orientation = "h")
     ) %>%
     add_segments(
       x = 0.5, xend = 0.5, y = 0, yend = 1, showlegend = FALSE,
@@ -108,8 +108,7 @@ popularity_plot <- function(data, choice) {
       xaxis = ax, yaxis = y, plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
       legend = list(
-        orientation = "h",
-        yanchor = "auto"
+        x = 0.5, y = 400, orientation = "h"
       )
     )
 }
