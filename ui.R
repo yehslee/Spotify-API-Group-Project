@@ -16,19 +16,19 @@ shinyUI(navbarPage(
   # Create a tab panel for your map
   tabPanel(
     "Welcome",
-    titlePanel(h4("Welcome to MÜD")),
+    titlePanel(HTML("<h4 id = myheader>Welcome to MÜD</h4 id = myheader>")),
     # Create sidebar layout
     mainPanel(
       tags$div(
-        HTML("<body> MUD is a project created using the Spotify Library 
-                 in order to vizualize artist's songs and mood paterns.<body>"),
+        HTML("<body id = maintext> MUD is a project created using the Spotify Library 
+                 in order to vizualize artist's songs and mood patterns.</body id = maintext>"),
         HTML("MÜD can also look through your own playlists to determine which songs
                  might go well together under three distinct moods. Give it a try!")
       )
     )
   ),
   tabPanel(
-    "Playlist",
+    HTML("<tabnames>Playlist</tabnames>"),
     titlePanel(h1("Custom Spotify MÜD Playlist")),
     # Create sidebar layout
     sidebarLayout(
@@ -84,8 +84,7 @@ shinyUI(navbarPage(
         selectInput("artist2",
           label = "Which Artist?",
           choices = unique(df$artist)
-        )
-        ,
+        ),
         radioButtons("pop_var",
           label = h2("Choose the Variable"),
           choices = list(
@@ -95,7 +94,12 @@ shinyUI(navbarPage(
         )
       ),
       mainPanel(
-        plotlyOutput("pop_plot")
+        plotlyOutput("pop_plot"),
+        HTML("<body> To understand some of these 
+             metrics, each of these factors is rated off of Spotify's 
+             algorithm and pertains to a specific aspect of the Artist's 
+             songs. You'll be able to see how different aspects of Artist's 
+             songs affect their popularity among the public.</body>")
       )
     )
   )

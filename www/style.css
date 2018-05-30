@@ -19,6 +19,18 @@ body {
    color:white;
    background:#282828;
 }
+#maintext {
+  font-family: 'Nunito', sans-serif;
+  color:white;
+  background:#282828;
+}
+#myheader {
+  color:#1db954;
+  font-family:"helvetica";
+  font-weight:bold;
+  font-size:30px;
+}
+
 h1 {
   color:#1db954;
   font-family:"helvetica";
@@ -42,4 +54,7 @@ h4 {
   font-weight:bold;
   font-size:30px;
   padding-left:10px
+}
+#tabnames:hover {
+  background-color:#1db954
 }
