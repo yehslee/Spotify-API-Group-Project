@@ -29,7 +29,7 @@ shinyUI(navbarPage(
       which songs might go well together under three distinct moods.
              The table will give you the top 20 songs from your playlist. 
              Give it a try! <br> <br>"),
-        HTML("<h4 id = myheader>Intended Users</h4 id = myheader>"),
+        HTML("<h4 id = secondmain>Intended Users</h4 id = secondmain>"),
         HTML(" <p id = maintext> Our target audience is anyone who uses 
               Spotify that is interested in understanding the overall
               trend of the artist's songs, relative to a specific mood

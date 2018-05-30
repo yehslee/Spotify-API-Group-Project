@@ -33,6 +33,13 @@ body {
   background:#282828;
   text-align: center
 }
+#secondmain {
+  color:#FFFFFF;
+  font-family:"helvetica";
+  font-weight:bold;
+  font-size:25px;
+  text-align: center;
+}
 p {
   font-family:'helvetica';
   padding-left: 200px;
