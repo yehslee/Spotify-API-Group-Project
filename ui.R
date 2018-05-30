@@ -25,15 +25,16 @@ shinyUI(navbarPage(
                  in order to vizualize artist's songs and mood patterns.
              With this, users can create a personalized playlist that satisfies
              a specific mood and artist.</body id = maintext>"),
-        HTML("<br> MÜD can also look through your own playlists to determine which songs
-                 might go well together under three distinct moods.
+        HTML("<br> MÜD can also look through your own playlists to determine 
+      which songs might go well together under three distinct moods.
              The table will give you the top 20 songs from your playlist. 
              Give it a try! <br> <br>"),
         HTML("<h4 id = myheader>Intended Users</h4 id = myheader>"),
-        HTML(" <p id = maintext> Our target audience is anyone who uses Spotify that is 
-              interested in understanding the overall trend of the artist's
-              songs, relative to a specific mood calulated by Spotify's 
-             classifying algorithm.</body id = maintext>")
+        HTML(" <p id = maintext> Our target audience is anyone who uses 
+              Spotify that is interested in understanding the overall
+              trend of the artist's songs, relative to a specific mood
+              calulated by Spotify's classifying algorithm.
+             </body id = maintext>")
       )
     # )
   ),
@@ -67,14 +68,14 @@ shinyUI(navbarPage(
   ),
   tabPanel(
     "Artist",
-    titlePanel(h1("Show Trends in Songs from Artists")),
+    titlePanel(h1("Trends in Artists' Songs")),
     # Create sidebar layout
     sidebarLayout(
       # Side panel for controls
       sidebarPanel(
         # Input to select variable to map
         selectInput("artist",
-          label = "Which Artist?",
+          label = "Choose Artist",
           choices = unique(df$artist)
         )
       ),
@@ -85,7 +86,7 @@ shinyUI(navbarPage(
   ),
   tabPanel(
     "Popularity",
-    titlePanel(h1("Show Relationships with Track Popularity")),
+    titlePanel(h1("Relationships between Track Popularity vs Mood")),
     # Create sidebar layout
     sidebarLayout(
       # Side panel for controls
@@ -96,7 +97,7 @@ shinyUI(navbarPage(
           choices = unique(df$artist)
         ),
         radioButtons("pop_var",
-          label = h2("Choose the Variable"),
+          label = h2("Choose the Mood"),
           choices = list(
             "Danceability" = "danceability", "Energy" = "energy",
             "Liveness" = "liveness", "Happiness" = "valence"
