@@ -68,14 +68,14 @@ shinyUI(navbarPage(
   ),
   tabPanel(
     "Artist",
-    titlePanel(h1("Show Trends in Songs from Artists")),
+    titlePanel(h1("Trends in Artists' Songs")),
     # Create sidebar layout
     sidebarLayout(
       # Side panel for controls
       sidebarPanel(
         # Input to select variable to map
         selectInput("artist",
-          label = "Which Artist?",
+          label = "Choose Artist",
           choices = unique(df$artist)
         )
       ),
@@ -86,7 +86,7 @@ shinyUI(navbarPage(
   ),
   tabPanel(
     "Popularity",
-    titlePanel(h1("Show Relationships with Track Popularity")),
+    titlePanel(h1("Relationships between Track Popularity vs Mood")),
     # Create sidebar layout
     sidebarLayout(
       # Side panel for controls
@@ -97,7 +97,7 @@ shinyUI(navbarPage(
           choices = unique(df$artist)
         ),
         radioButtons("pop_var",
-          label = h2("Choose the Variable"),
+          label = h2("Choose the Mood"),
           choices = list(
             "Danceability" = "danceability", "Energy" = "energy",
             "Liveness" = "liveness", "Happiness" = "valence"

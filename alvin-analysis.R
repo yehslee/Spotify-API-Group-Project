@@ -110,7 +110,7 @@ popularity_plot <- function(data, choice) {
       xaxis = ax, yaxis = y, plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
       height = 400,
-      width = 800,
+      width = 1000,
       legend = list(
         x = 0.5, y = -800, orientation = "h"
       )
