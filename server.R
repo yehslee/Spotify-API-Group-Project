@@ -57,7 +57,7 @@ create_table <- function(df, table_height = 50) {
     type = "table",
     header = header,
     cells = cells,
-    width = 1200,
+    width = 900,
     height = 1600
   ) %>%
     layout(
@@ -107,6 +107,6 @@ shinyServer(function(input, output) {
       mood <- simp(input$username)
     }
 
-    return(createTable(mood))
+    return(create_table(mood))
   })
 })

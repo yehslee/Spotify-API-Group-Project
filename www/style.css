@@ -27,7 +27,11 @@ h1 {
   font-size:30px;
 }
 h2 {
+<<<<<<< HEAD
   color:white;
+=======
+  color:#FFFFFF;
+>>>>>>> 383276472e2a1e6d45a8e00d419aa29bd6da1d24
   font-family:"Nunito";
   font-style:italic;
   font-size:20px;
@@ -38,7 +42,7 @@ h3 {
   font-size:35px;
 }
 h4 {
-  color:#70a1ff;
+  color: white;
   font-family:"Nunito";
   font-size:20px;
 }
