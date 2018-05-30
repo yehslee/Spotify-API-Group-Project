@@ -15,6 +15,20 @@ shinyUI(navbarPage(
   "MÜD",
   # Create a tab panel for your map
   tabPanel(
+     "Welcome",
+     titlePanel(h1("Welcome to MÜD")),
+     # Create sidebar layout
+        mainPanel(
+         tags$div (
+            HTML("<h1>Welcome to MÜD.</h1>"),
+            HTML("<body> MUD is a project created using the Spotify Library 
+                 in order to vizualize artist's songs and mood paterns.<body>"),
+            HTML("MÜD can also look through your own playlists to determine which songs
+                 might go well together under three distinct moods. Give it a try!")
+         )
+        )
+  ),
+  tabPanel(
     "Playlist",
     titlePanel(h1("Custom Spotify MÜD Playlist")),
     # Create sidebar layout
@@ -57,15 +71,15 @@ shinyUI(navbarPage(
         radioButtons("x_var",
                      label = h3("Choose the X-Variable"),
                      choices = list(
-                       "danceability", "energy",
-                       "happiness" = "valence"
+                       "Danceability" = "danceability", "Energy" = "energy",
+                       "Happiness" = "valence"
                      )
         ),
         radioButtons("y_var",
                      label = h2("Choose the Y-Variable"),
                      choices = list(
-                       "danceability", "energy",
-                       "happiness" = "valence"
+                        "Danceability" = "danceability", "Energy" = "energy",
+                        "Happiness" = "valence"
                      )
         )
       ),
@@ -88,10 +102,10 @@ shinyUI(navbarPage(
         )
         ,
         radioButtons("pop_var",
-                     label = h2("Choose the variable"),
+                     label = h2("Choose the Variable"),
                      choices = list(
-                       "danceability", "energy", "liveness",
-                       "happiness" = "valence"
+                       "Danceability" = "danceability", "Energy" = "energy", 
+                       "Liveness" = "liveness", "Happiness" = "valence"
                      )
         )
       ),

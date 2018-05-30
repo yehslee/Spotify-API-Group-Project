@@ -4,8 +4,8 @@ library(stringr)
 
 custom_plot <- function(data, x_axis, y_axis) {
   f <- list(
-    family = "Courier New, monospace",
-    size = 18,
+    family = "Helvetica",
+    size = 15,
     color = "#FFFFFF"
   )
   ax <- list(
@@ -26,7 +26,7 @@ custom_plot <- function(data, x_axis, y_axis) {
   )
   l <- list(
     font = list(
-      family = "sans-serif",
+      family = "Helvetica",
       size = 12,
       color = "#000"),
      bgcolor = "#E2E2E2"
@@ -41,6 +41,8 @@ custom_plot <- function(data, x_axis, y_axis) {
   ) %>%
     layout(
       xaxis = ax, yaxis = ay,
+      height = 400,
+      width = 400,
       plot_bgcolor = "transparent",
       paper_bgcolor = "transparent",
       legend = list(orientation = "h")
@@ -51,12 +53,12 @@ custom_plot <- function(data, x_axis, y_axis) {
 
 popularity_plot <- function(data, choice) {
   f <- list(
-    family = "Courier New, monospace",
-    size = 18,
-    color = "#ffffff"
+    family = "Helvetica",
+    size = 15,
+    color = "#1db954"
   )
   f1 <- list(
-    family = "Arial, sans-serif",
+    family = "Helvetica",
     size = 10,
     color = "lightgrey"
   )
