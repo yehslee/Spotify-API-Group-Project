@@ -3,6 +3,14 @@
 background:linear-gradient(#383838,#282828);
 color:#1db954;
 }
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color:#1db954
+}
 .overflow{
    background-color:#282828;
 }
@@ -20,11 +28,16 @@ body {
    background:#282828;
 }
 #maintext {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'helvetica', sans-serif;
   color:white;
   background:#282828;
   text-align: center
-
+}
+p {
+  font-family:'helvetica';
+  padding-left: 200px;
+  padding-right:200px;
+  font-size: 20px;
 }
 #myheader {
   color:#1db954;
@@ -33,7 +46,6 @@ body {
   font-size:30px;
   text-align: center;
 }
-
 h1 {
   color:#1db954;
   font-family:"helvetica";

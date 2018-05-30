@@ -10,6 +10,7 @@ custom_plot <- function(data, x_axis, y_axis) {
   )
   ax <- list(
     title = "Energy",
+    side="top",
     titlefont = f,
     zeroline = FALSE,
     showline = FALSE,
@@ -64,7 +65,7 @@ custom_plot <- function(data, x_axis, y_axis) {
       x = annot$x,
       y = annot$y,
       text = annot$text,
-      textfont = list(color = "#FFFFFF"),
+      font = list(color = "#FFFFFF"),
       showarrow = FALSE
     )
   return(p)
