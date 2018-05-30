@@ -16,19 +16,22 @@ color:#1db954;
 }
 body {
    font-family: 'Nunito', sans-serif;
-   color:white;
+   color:white !important;
    background:#282828;
 }
 #maintext {
   font-family: 'Nunito', sans-serif;
   color:white;
   background:#282828;
+  text-align: center
+
 }
 #myheader {
   color:#1db954;
   font-family:"helvetica";
   font-weight:bold;
   font-size:30px;
+  text-align: center;
 }
 
 h1 {
@@ -57,4 +60,7 @@ h4 {
 }
 #tabnames:hover {
   background-color:#1db954
+
+.legendtext {
+  fill: white !important;
 }

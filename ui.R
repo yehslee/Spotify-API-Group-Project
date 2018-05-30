@@ -18,9 +18,9 @@ shinyUI(navbarPage(
     "Welcome",
     titlePanel(HTML("<h4 id = myheader>Welcome to MÜD</h4 id = myheader>")),
     # Create sidebar layout
-    mainPanel(
+    # mainPanel(
       tags$div(
-        HTML("<body id = maintext> MÜD is a project created using the Spotifyr Library 
+        HTML("<p id = maintext> MÜD is a project created using the Spotifyr Library 
                  in order to vizualize artist's songs and mood patterns.
              With this, users can create a personalized playlist that satisfies
              a specific mood and artist.</body id = maintext>"),
@@ -28,7 +28,7 @@ shinyUI(navbarPage(
                  might go well together under three distinct moods.
              The table will give you the top 20 songs from your playlist. Give it a try!")
       )
-    )
+    # )
   ),
   tabPanel(
     HTML("<tabnames>Playlist</tabnames>"),

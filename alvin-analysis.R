@@ -64,6 +64,7 @@ custom_plot <- function(data, x_axis, y_axis) {
       x = annot$x,
       y = annot$y,
       text = annot$text,
+      textfont = list(color = "#FFFFFF"),
       showarrow = FALSE
     )
   return(p)
