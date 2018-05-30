@@ -20,10 +20,13 @@ shinyUI(navbarPage(
     # Create sidebar layout
     mainPanel(
       tags$div(
-        HTML("<body id = maintext> MUD is a project created using the Spotify Library 
-                 in order to vizualize artist's songs and mood patterns.</body id = maintext>"),
-        HTML("MÜD can also look through your own playlists to determine which songs
-                 might go well together under three distinct moods. Give it a try!")
+        HTML("<body id = maintext> MÜD is a project created using the Spotifyr Library 
+                 in order to vizualize artist's songs and mood patterns.
+             With this, users can create a personalized playlist that satisfies
+             a specific mood and artist.</body id = maintext>"),
+        HTML("<br> MÜD can also look through your own playlists to determine which songs
+                 might go well together under three distinct moods.
+             The table will give you the top 20 songs from your playlist. Give it a try!")
       )
     )
   ),
