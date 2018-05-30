@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 .navbar-default .navbar-brand, .navbar, .navbar-header {
 background:linear-gradient(#383838,#282828);
 color:#1db954;
@@ -7,7 +7,7 @@ color:#1db954;
    background-color:#282828;
 }
 .well {
-   background-color:#282828;
+   background:linear-gradient(#282828,#383838);
    outline-color: #282828;
    color:white;
 }
@@ -17,7 +17,7 @@ color:#1db954;
 body {
    font-family: 'Nunito', sans-serif;
    color:white;
-   background:linear-gradient(#383838, #282828;
+   background:#282828;
 }
 h1 {
   color:#1db954;
