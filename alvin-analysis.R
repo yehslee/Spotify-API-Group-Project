@@ -86,5 +86,9 @@ popularity_plot <- function(data, choice) {
     text = ~ track_name, color = ~ album_name, colors = "Greens", type = "scatter"
   ) %>%
     layout(xaxis = ax, yaxis = y, plot_bgcolor = "transparent",
-           paper_bgcolor = "transparent")
+           paper_bgcolor = "transparent",
+           legend = list(
+             orientation = "h",
+             yanchor = "auto"
+           ))
 }
