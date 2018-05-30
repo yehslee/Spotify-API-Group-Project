@@ -1,45 +1,44 @@
 
-.navbar {
-background-color:#282828;
-color:#1e90ff;
+.navbar-default .navbar-brand, .navbar, .navbar-header {
+background:linear-gradient(#383838,#282828);
+color:#1db954;
+}
+.overflow{
+   background-color:#282828;
 }
 .well {
    background-color:#282828;
    outline-color: #282828;
+   color: inherit;
 }
 .irs-bar {
    background-color:#1e90ff;
 }
 body {
    font-family: 'Nunito', sans-serif;
-   color:#1e90ff;
-   background-color:#383838;
+   color:#1db954;
+   background:linear-gradient(#383838, #282828);
 }
-bodydark {
-   color:#383838;
-}
+
 h1 {
   color:#1db954;
   font-family:"helvetica";
   font-weight:bold;
-  font-size:35px;
+  font-size:30px;
 }
 h2 {
-  color:#ff6b81;
+  color:white;
   font-family:"Nunito";
   font-style:italic;
   font-size:20px;
 }
 h3 {
-  color:#1e90ff;
+  color:white;
   font-family:"Nunito";
-  font-weight:bold;
   font-size:35px;
 }
 h4 {
   color:#70a1ff;
   font-family:"Nunito";
-  font-style:italic;
   font-size:20px;
 }
-
