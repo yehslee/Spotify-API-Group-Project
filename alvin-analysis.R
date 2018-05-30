@@ -9,6 +9,7 @@ custom_plot <- function(data, x_axis, y_axis) {
     color = "#FFFFFF"
   )
   ax <- list(
+    side = "top",
     title = "Energy",
     titlefont = f,
     zeroline = FALSE,
