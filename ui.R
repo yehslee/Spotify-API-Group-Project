@@ -16,11 +16,10 @@ shinyUI(navbarPage(
   # Create a tab panel for your map
   tabPanel(
     "Welcome",
-    titlePanel(h1("Welcome to MÜD")),
+    titlePanel(h4("Welcome to MÜD")),
     # Create sidebar layout
     mainPanel(
       tags$div(
-        HTML("<h1>Welcome to MÜD.</h1>"),
         HTML("<body> MUD is a project created using the Spotify Library 
                  in order to vizualize artist's songs and mood paterns.<body>"),
         HTML("MÜD can also look through your own playlists to determine which songs
