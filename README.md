@@ -1,2 +1,4 @@
 # info201-final-project-group
-# Include well-described final project writeup!
+[https://jojosaunders.shinyapps.io/info201-final-project-group/][1]
+
+[1]:	https://jojosaunders.shinyapps.io/info201-final-project-group/
