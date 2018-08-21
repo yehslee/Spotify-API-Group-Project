@@ -36,7 +36,7 @@ artist_df <- rbind(artist_df, get_artist_audio_features("Taylor Swift") %>%
 artist_df <- rbind(artist_df, get_artist_audio_features("Beyonce") %>%
   mutate(artist = "Beyonce"))
 artist_df <- rbind(artist_df, get_artist_audio_features("Frank Ocean") %>%
-                     mutate(artist = "Frank Ocean"))
+                     mutate(artist = "Frank Ocean")) 
 
 artist_df <- artist_df %>%
   filter(!(album_name ==
